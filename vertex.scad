@@ -7,8 +7,8 @@ module extrusion_cutout(h, extra) {
   difference() {
     cube([extrusion+extra, extrusion+extra, h], center=true);
     for (a = [0:90:359]) rotate([0, 0, a]) {
-      translate([extrusion/2, 0, 0])
-        cube([6, 2.5, h+1], center=true);
+//      translate([extrusion/2, 0, 0])
+//        cube([6, 2.5, h+1], center=true);
     }
   }
 }
@@ -21,7 +21,7 @@ module screw_socket() {
 module screw_socket_cone() {
   union() {
     screw_socket();
-    scale([1, 1, -1]) cylinder(r1=4, r2=7, h=4);
+//    scale([1, 1, -1]) cylinder(r1=4, r2=7, h=4);
   }
 }
 
